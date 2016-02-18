@@ -31,7 +31,7 @@ while hour < totalHour
     
     while(minutes ~= minutesEnd)
         % Concatenations for single digit situations
-        minutesStr = int2str(minutes);
+        minutesStr = []
         if minutes < 10
             minutesStrCat = strcat('0',minutesStr);
             minutesStr = minutesStrCat;
@@ -45,7 +45,7 @@ while hour < totalHour
         baseUrl = strcat( 'https://10.106.50.174/cgi/admin/getSDFile.cgi?file=',date,'_',time,format,'&path=DCS-942L/');
 
         semifullPath = strcat(date,hourFolder,date,'_',time,'.mp4');
-        semifullPath2 = ['https://10.106.50.174/cgi/admin/getSDFile.cgi?file=',date,'_',time,format,'&path=DCS-942L/'] ;
+        semifullPath2 = 'https://10.106.50.174/cgi/admin/getSDFile.cgi?file=20160210_181200.mp4&path=DCS-942L/' ;
         fullPath = strcat(semifullPath2,semifullPath);
 
         %% Complete URL and showtime!  
